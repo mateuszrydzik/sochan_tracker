@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    container_name: sochan_tracker
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app:/app
+    command: python3 api.py
