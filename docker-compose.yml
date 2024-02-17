@@ -1,10 +1,21 @@
 version: '3'
 services:
   app:
-    container_name: sochan_tracker
-    build: .
+    container_name: st-api
+    build:
+      context: ./app
     ports:
       - "5000:5000"
     volumes:
       - ./app:/app
     command: python3 api.py
+
+  frontend:
+    container_name: st-web
+    build:
+      context: ./web  # Katalog z plikami aplikacji Vue.js
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./web:/web
+    command: npm run serve
