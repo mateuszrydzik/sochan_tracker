@@ -1,3 +1,4 @@
 nba_api==1.4.1
 Flask==3.0.2
 pandas==2.2.0
+Flask-Cors==4.0.0
