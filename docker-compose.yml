@@ -5,7 +5,7 @@ services:
     build:
       context: ./app
     ports:
-      - "5000:5000"
+      - "7552:5000"
     volumes:
       - ./app:/app
     command: python3 api.py

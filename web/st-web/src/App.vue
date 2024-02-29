@@ -56,7 +56,7 @@ export default {
     };
   },
   created() {
-    axios.get('http://localhost:5000/get_last_games')
+    axios.get('http://localhost:7552/get_last_games')
       .then(response => {
         this.gameData = response.data;
       })
