@@ -8,6 +8,7 @@ services:
       - "7552:5000"
     volumes:
       - ./app:/app
+
     command: python3 api.py
 
   frontend:
@@ -18,4 +19,5 @@ services:
       - "8080:8080"
     volumes:
       - ./web:/web
+      - ./.env:/web/st-web/.env
     command: npm run serve

@@ -56,7 +56,7 @@ export default {
     };
   },
   created() {
-    axios.get('http://localhost:7552/get_last_games')
+    axios.get(process.env.VUE_APP_ST_API_URL + '/get_last_games')
       .then(response => {
         this.gameData = response.data;
       })
