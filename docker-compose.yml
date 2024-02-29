@@ -13,7 +13,7 @@ services:
   frontend:
     container_name: st-web
     build:
-      context: ./web  # Katalog z plikami aplikacji Vue.js
+      context: ./web
     ports:
       - "8080:8080"
     volumes:

@@ -6,6 +6,6 @@ def get_last_games_stats():
     sochan_id = play[0]['id']
     logs = playergamelog.PlayerGameLog(player_id = sochan_id).get_data_frames()
     logs = logs[0].head(5)
-    logs = logs[['GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'PTS', 'FGM', 'FGA', 'REB', 'AST', 'STL', 'BLK', 'TOV']]
+    logs = logs[['GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'PTS', 'FGM', 'FGA', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PLUS_MINUS']]
     table = logs.to_dict(orient='records')
     return table

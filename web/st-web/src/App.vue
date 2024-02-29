@@ -18,6 +18,7 @@
             <th>STL</th>
             <th>BLK</th>
             <th>TOV</th>
+            <th>+/-</th>
           </tr>
         </thead>
         <tbody>
@@ -34,6 +35,7 @@
             <td>{{ game.STL }}</td>
             <td>{{ game.BLK }}</td>
             <td>{{ game.TOV }}</td>
+            <td>{{ game.PLUS_MINUS }}</td>
           </tr>
         </tbody>
       </table>
@@ -106,5 +108,10 @@ tr:nth-child(even) {
 
 tr:hover {
   background-color: #777;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
 }
 </style>
